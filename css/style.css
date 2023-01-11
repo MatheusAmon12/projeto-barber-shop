@@ -3,6 +3,8 @@
 
 :root{
     --color-primary: #917758;
+    --color-secondary: #3c2915;
+    --color-primary-light: #f5eee6;
 }
 
 *{
@@ -100,7 +102,6 @@
         ABOUT
 **********************/
 .about{
-    height: 100vh;
     background-color: var(--color-primary);
 }
 
@@ -109,23 +110,276 @@
 }
 
 .about .timing{
+    position: relative;
+    top: -50px;
     padding: 20px;
     width: 33%;
     background-image: url('../images/brush-big.jpg');
+    background-size: cover;
 }
 
 .about .timing .overlay{
     background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about .timing .icon-cut{
+    width: 50px;
+}
+
+.about .timing h3{
+    width: fit-content;/*Faz com que o h3 fique do tamanho do contéudo, assim a borda adicionada fica do tamanho exato dele.*/
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.about .timing .text{
+    margin: 15px 0;
+}
+
+.about .timing .text:after{
+    display: block;
+    margin-top: 15px;
+    content: "•";
+    font-size: 26px;
+    color: white;
+}
+
+.about .timing .text:last-of-type:after{
+    content: "|";
+}
+
+.about .timing .text h4{
+    font-weight: 400;
+    font-size: 15px;
+    color: grey;
+}
+
+.about .timing span{
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
 }
 
 .about .experience{
     width: 66%;
+    margin-left: 7%;
+    margin-top: 100px;
+    color: white;
 }
 
-.about .container .timing .overlay{
+.about .experience .text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .experience .text p{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.about .experience h2{
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.about .experience h2:after{
+    display: block;
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: #a38f78;
+    margin: 20px 0;
+}
+
+/***********************
+        SERVICES
+************************/
+
+.services{
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--color-primary-light);
+}
+
+.services h2{
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.services .boxes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.services .box{
+    border: 3px solid var(--color-primary);
+    padding: 50px 40px;
+    margin: 30px;
+}
+
+.services .box h4{
+    color: var(--color-secondary);
+    margin-top: 30px;
+}
+
+.services .box p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/*************************
+        APPOINTMENT
+**************************/
+
+.appointment{
+    padding: 100px 0;
+    background-color: var(--color-primary);
+    height: 100vh;
+    background-image: url('../images/chair-ic.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 300px;
+}
+
+.appointment h2{
+    margin-bottom: 10px;
+    color: var(--color-primary-light);
+    font-weight: 400;
+    font-size: 50px;
     text-align: center;
 }
 
-.about .container .timing .overlay span{
+.appointment img{
     display: block;
+    margin: 0 auto;
+}
+
+.appointment form{
+    margin-top: 60px;
+}
+
+.appointment .personal-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.appointment  .input-wrapper{
+    width: 100%;
+    margin-right: 50px;
+}
+
+.appointment .input-wrapper:last-of-type{
+    margin-right: 0;
+}
+
+.appointment .personal-data input, .appointment .personal-data select, .appointment textarea{
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.appointment label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.appointment textarea{
+    height: 100px;
+}
+
+.appointment .btn{
+    background-color: var(--color-secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    margin-top: 10px;
+}
+
+/***********************
+        GALLERY
+************************/
+
+.gallery{
+    text-align: center;
+    padding: 100px 0;
+    background-color: var(--color-primary-light);
+}
+
+.gallery h2{
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.gallery .gallery-wrapper{
+    margin: 50px auto;
+    height: 100vh;
+    width: 900px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.gallery .gallery-wrapper div{
+    border: 10px solid var(--color-primary);
+    margin: 6px;
+    width: 33%;
+}
+
+.gallery .gallery-wrapper div img{
+    width: 100%;
+    height: 100%;
+}
+
+/***********************
+        LOCATION
+************************/
+
+.location{
+    padding: 100px 0;
+    height: 100vh;
+    background-image: url("../images/bg-location.jpg");
+    background-size: cover;
+}
+
+.location .location-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 50px 30px;
+    color: white;
+}
+
+.location .location-wrapper .info{
+    display: flex;
+    justify-content: center;
+}
+
+.location .location-wrapper .info div h4{
+    font-weight: 400;
+    font-size: 15px;
+    color: grey;
+}
+
+.location .location-wrapper .info div span{
+    font-weight: 400;
+    font-size: 15px;
+    color: grey;
 }
