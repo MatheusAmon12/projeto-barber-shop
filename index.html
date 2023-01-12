@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="home">
+    <section class="home" id="home">
         <header class="header">
             <nav class="nav">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <a href="#services">Serviços</a>
                     </li>
                     <li>
                         <img src="images/logo.png" alt="Barber Shop" class="logo">
                     </li>
                     <li>
-                        <a href="#">Agendamento</a>
+                        <a href="#gallery">Galeria</a>
                     </li>
                     <li>
-                        <a href="#">Galeria</a>
+                        <a href="#appointment">Agendamento</a>
                     </li>
                     <li>
-                        <a href="#">Localização</a>
+                        <a href="#location">Localização</a>
                     </li>
                 </ul>
             </nav>
@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="timing">
                 <div class="overlay">
@@ -101,7 +101,7 @@
         </div>
     </section>
 
-    <section class="services">   
+    <section class="services" id="services">   
         <div class="container">
             <h2>Nossos Serviços</h2>
             <img src="images/heading-ic.png" alt="Serviços">
@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <section class="appointment">
+    <section class="appointment" id="appointment">
         <div class="container">
             <h2>Faça um agendamento</h2>
             <img src="images/heading-ic-white.png" alt="Faça um agendamento">
@@ -173,7 +173,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2>Galeria de Fotos</h2>
             <img src="images/heading-ic.png" alt="Galeria de Fotos">
@@ -203,11 +203,13 @@
         </div>
     </section>
 
-    <section class="location">
+    <section class="location" id="location">
         <div class="container">
             <div class="location-wrapper">
                 <div class="info">
-                    <img src="images/map-img1.png" alt="Localização" class="info-icon">
+                    <div class="info-icon">
+                        <img src="images/map-img1.png" alt="Localização">
+                    </div>
                     <div>
                         <h4>Localização</h4>
                         <span>Rua da Matrix</span>
@@ -215,7 +217,9 @@
                 </div>
 
                 <div class="info">
-                    <img src="images/map-img2.png" alt="Telefone" class="info-icon">
+                    <div class="info-icon">
+                        <img src="images/map-img2.png" alt="Telefone">
+                    </div>
                     <div>
                         <h4>Telefone</h4>
                         <span>(11) 99999-9999</span>
@@ -223,7 +227,9 @@
                 </div>
 
                 <div class="info">
-                    <img src="images/map-img3.png" alt="E-mail" class="info-icon">
+                    <div class="info-icon">
+                        <img src="images/map-img3.png" alt="E-mail">
+                    </div>
                     <div>
                         <h4>E-mail</h4>
                         <span>contato@barbershop.com</span>
@@ -231,14 +237,23 @@
                 </div>
 
                 <div class="info">
-                    <img src="images/map-img4.png" alt="Horário" class="info-icon">
+                    <div class="info-icon">
+                        <img src="images/map-img4.png" alt="Horário">
+                    </div>
                     <div>
                         <h4>Horário</h4>
                         <span>Seg. à Sex.: 9:00AM às 17PM</span>
                     </div>
                 </div>
             </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.704042152654!2d-44.940799785018484!3d-17.329823067202327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa0b7aa61b41d3%3A0x7a799a3c588d1998!2sSal%C3%A3o%20Super%20Corte!5e0!3m2!1spt-BR!2sbr!4v1673545493496!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
+
+    <footer class="footer">
+        © 2023 Barber Shop - Todos os direitos reservados
+    </footer>
 </body>
 </html>
